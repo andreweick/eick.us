@@ -1,6 +1,5 @@
-## ndbooks ms
 
-### Installation
+### Installation, requires node.js
 
 ```
 $ make install
