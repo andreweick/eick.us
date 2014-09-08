@@ -1,0 +1,15 @@
+---
+layout: home.html
+---
+{% extends 'default.html' %}
+{% block content %}
+	{{ contents | safe }}
+
+{% for article in family|slice(0,30) %}
+<div class="headings">
+<h2><a href="{{ article.path }}">{{ article.title }} + </a></h2>
+</div>
+
+{% endfor %}
+
+{% endblock %}

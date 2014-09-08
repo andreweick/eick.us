@@ -1,0 +1,69 @@
+article.hentry {
+  padding: 1.5rem;
+  margin:auto;
+  //max-width: $d-vp;
+  //min-height: $c-vp;
+  overflow: hidden;
+  border-radius:4px;
+  header {
+    margin-bottom: .5em;
+  }
+  p {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  //TODO: MAKE THE IMAGES FULL WIDTH, BUT NOT THE TEXT
+  img, p img{
+  	max-width: 100%;
+    padding: 0
+  }
+
+  p img {
+    padding-left: -7rem;
+    padding-right: -7rem;
+  }
+    @include media($medium-screen-up) {
+  	padding: 2rem 0;
+  }
+}
+
+.lead, .lead p {
+      font-size: 1.0625rem;
+      line-height: 1.5;
+      font-weight:300;
+    }
+
+
+
+// article img:first-child {
+//     float: none;
+//     margin: 0 0 1.5em 0;
+//
+//   @include media($small-screen-up) {
+//
+//       float: left;
+//       margin: .5em 1.4em 1.5em 0;
+//   }
+//
+//
+//
+//
+// }
+
+hr {
+//margin-top:    @line-height-computed;
+//margin-bottom: @line-height-computed;
+margin:1em auto;
+border: 0;
+border-top: 1px solid #EEEEEE;
+}
+
+
+sup, sub {
+//@include adjust-font-size-to($kappa);
+ vertical-align: baseline;
+ position: relative;
+ top: -0.4em;
+}
+sub { top: 0.4em; }

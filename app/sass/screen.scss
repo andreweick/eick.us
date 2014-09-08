@@ -1,0 +1,41 @@
+//REQUIRED
+@import "vendor/normalize";
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+// BASIC MODULES
+
+@import "modules/nav-top";
+@import "modules/hero";
+@import "modules/footer";
+
+// GLOBAL
+@import "modules/article";
+@import "modules/layouts";
+@import "modules/sidebar";
+@import "vendor/fontello";
+
+body.bpn{color:green;}
+
+.caption {
+  text-transform: italic;
+  font-style: italic;
+}
+
+
+.state-icons i{
+  font-size: 230%;
+  color: $black;
+  display: none;
+  margin: .5em auto;
+    @include media($d-vp) {
+      display: block;
+    }
+}
+
+.headings {
+  padding: 1em;
+  width: 100%;
+  border-bottom: 1px solid $light-gray;
+}

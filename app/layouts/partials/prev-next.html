@@ -1,0 +1,20 @@
+<div class="page-icons">
+  {% if previous %}
+    <a class="previous" href="/{{ previous.path }}"><i class="icon-ion-chevron-left"></i> <span class="prev-title">{{ previous.title }}</span></a>
+  {% endif %}
+  {% if next %}
+    <a class="next" href="/{{ next.path }}"><span class="prev-title">{{ next.title }}</span> <i class="icon-ion-chevron-right"></i></a>
+  {% endif %}
+</div>
+<script>
+  document.body.onkeyup = function(e){
+    {% if previous %}
+      if (e.keyCode == '37') { window.location = '/{{ previous.path | safe }}'; }
+    {% endif %}
+    {% if next %}
+      if (e.keyCode == '39') { window.location = '/{{ next.path | safe }}'; }
+    {% endif %}
+  };
+</script>
+
+

@@ -1,0 +1,14 @@
+object, embed, iframe {
+  max-width: 100% !important;
+}
+
+.screen-reader-text { /* Reusable, toolbox kind of class */
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+
+
+.sharing {
+margin-top: 4em;
+}
