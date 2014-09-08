@@ -1,4 +1,5 @@
 'use strict';
+//this file is for development use only, for error report. to be deleted.
 //module.exports = build; //Exports build process for gulp
 
 var Metalsmith          = require('metalsmith'),
