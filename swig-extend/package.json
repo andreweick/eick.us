@@ -1,0 +1,15 @@
+{
+  "name": "swig-extend",
+  "version": "1.0.0",
+  "description": "Swig helpers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "budparr",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^2.4.1",
+    "moment": "^2.8.3"
+  }
+}

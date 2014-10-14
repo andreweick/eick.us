@@ -1,0 +1,21 @@
+---
+layout: author.html
+---
+{% extends 'default.html' %}
+{% block content %}
+  <div class="has-layout">
+    <article class="page hentry {% if page_class %}{{ page_class }}{% endif %}">
+      {% if title %}
+        <header>
+          <h1 class="entry-title">{{ title }}</h1>
+        </header>
+      {% endif %}
+      <div class="entry-content prose">
+        {{ contents | safe }}
+        {% if include_on_page %}
+          {% include include_on_page %}
+        {% endif %}
+      </div>
+    </article>
+  </div>
+{% endblock %}

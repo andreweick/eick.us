@@ -1,0 +1,20 @@
+---
+layout: post.html
+---
+{% extends 'default.html' %}
+{% block content %}
+  <article class="hentry post{% if photo_layout %}-{{ photo_layout }}{% endif %}">
+    {% if title %}
+        <header>
+          <h1 class="entry-title">{{ title }}</h1>
+        </header>
+      {% endif %}
+    <section class="entry-content prose">
+      <p class="lead">{{ intro | safe }}</p>
+      <div class="gallery" id="container">
+        <div class="grid-sizer"></div>
+        {{ contents | safe }}
+      </div>
+    </section>
+  </article>
+{% endblock %}

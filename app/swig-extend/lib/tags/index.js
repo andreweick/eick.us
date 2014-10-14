@@ -1,1 +1,0 @@
-exports.vimeo = require('./vimeo');

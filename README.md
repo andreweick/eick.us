@@ -3,6 +3,6 @@
 
 ```
 $ make install
-$ make serve
+$ make build
 $ open http://localhost:3000
 ```
