@@ -79,14 +79,14 @@ var m = new Metalsmith(__dirname);
     metadata:    'data/metadata.json'
   }));
 
-  m.use(drafts());
+  //m.use(drafts());
 
   // Assign templates automatically to files and other nice configurations for documents
   m.use(fileMetadata([
     {pattern: "drafts/*.md",       metadata: { "draft": "true" }}, //anything in the drafts folder doesn't get published
     {pattern: "about.md",          metadata: { "template": "page.html" }},
     {pattern: "about/contact.md",  metadata: { "include_on_page":  "partials/form-contact.html", "template": "page.html"}},
-    {pattern: "family/*.md",       metadata: { "template": "post.html" }},
+    {pattern: "family/**/*.md",    metadata: { "template": "post.html" }},
     {pattern: "history/*.md",      metadata: { "template": "post.html" }},
     {pattern: "snapshot/*.md",     metadata: { "template": "post.html" }},
   ]));
@@ -94,7 +94,7 @@ var m = new Metalsmith(__dirname);
   // Create Collections
   m.use(collections({
     about:    { pattern: 'about/*.md',     sortBy: 'date',  reverse: true },
-    family:   { pattern: 'family/*.md',    sortBy: 'date',  reverse: true },
+    family:   { pattern: 'family/**/*.md', sortBy: 'date',  reverse: true },
     history:  { pattern: 'history/*.md',   sortBy: 'date',  reverse: true },
     snapshot: { pattern: 'snapshot/*.md',  sortBy: 'date',  reverse: true },
   }));
@@ -110,7 +110,7 @@ var m = new Metalsmith(__dirname);
 
   // this appears to need to go after use.markdown and before the use.templates
   m.use(permalinks({
-    pattern: ':collection/:slug',
+    //pattern: ':collection/:slug',
     relative: false
   }));
 
